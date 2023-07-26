@@ -13,3 +13,10 @@
  */
 
 // Your code starts here.
+
+// If this file is called directly, abort.
+if ( ! defined( 'WPINC' ) ) {
+	die;
+}
+
+require_once 'post-types/events.php';

@@ -21,16 +21,14 @@ grunt.initConfig({
     dev: {
       bsFiles: {
         src : [
-          'dst/**/*.css',
-          'dst/**/*.php',
-          'dst/**/*.js'
+          'dst/**/*.{png,svg,php,css,js,txt,html,png,svg}'
         ]
       },
       options: {
         // server: { baseDir: "./" }
         watchTask: true,
         open: false,
-        proxy: "http://plugins.lndo.site/"
+        proxy: "https://plugins.lndo.site/"
       }
     }
   },
@@ -52,10 +50,7 @@ grunt.initConfig({
       files: [{
         cwd: 'src/',
         src: [
-          '**/*.php',
-          '**/*.css',
-          '**/*.js',
-          '**/*.txt'
+          '**/*.{png,svg,php,css,js,txt,html,png,svg}'
         ],
         dest: 'dst/',
       }]
@@ -70,10 +65,7 @@ grunt.initConfig({
   watch: {
     all: {
       files: [
-        '**/*.php',
-        '**/*.css',
-        '**/*.js',        
-        '**/*.txt'
+        'dst/**/*.{png,svg,php,css,js,txt,html,png,svg}'
       ],
       tasks: ['sync:all'],
     }
