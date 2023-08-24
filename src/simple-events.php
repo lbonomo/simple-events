@@ -19,4 +19,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-require_once 'post-types/events.php';
+require_once 'libs/events.php';
+require_once 'libs/settings.php';
+
+new Event_Options_Page;

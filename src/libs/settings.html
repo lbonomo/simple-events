@@ -1,0 +1,69 @@
+<div class="wrap">
+	<h1>Events General Settings</h1>
+	<form method="post" action="options.php" novalidate="novalidate">
+		<table class="form-table" role="presentation">
+			<tbody>
+				<tr>
+					<th scope="row"><label for="event_name">Name</label></th>
+					<td>
+						<input name="event_name" type="text" id="event_name" value="" class="regular-text">
+					</td>
+				</tr>
+
+				<tr>
+					<th scope="row"><label for="address_street">Street</label></th>
+					<td>
+						<input name="address_street" type="text" id="address_street" value="" class="regular-text">
+					</td>
+				</tr>
+
+				<tr>
+					<th scope="row"><label for="address_locality">Locality</label></th>
+					<td>
+						<input name="address_locality" type="text" id="address_locality" value="" class="regular-text">
+					</td>
+				</tr>
+
+
+
+				<tr>
+					<th scope="row"><label for="address_postal_code">Postal Code</label></th>
+					<td>
+						<input name="address_postal_code" type="text" id="address_postal_code" value="" class="regular-text">
+					</td>
+				</tr>
+
+
+
+				<tr>
+					<th scope="row"><label for="address_region">Region</label></th>
+					<td>
+						<input name="address_region" type="text" id="address_region" value="" class="regular-text">
+					</td>
+				</tr>
+
+
+
+				<tr>
+					<th scope="row"><label for="address_country">Country</label></th>
+					<td>
+						<input name="address_country" type="text" id="address_country" value="" class="regular-text">
+					</td>
+				</tr>
+
+
+				<tr>
+					<th scope="row"><label for="offers_priceCurrency">Price Currency</label></th>
+					<td>
+						<input name="offers_priceCurrency" type="text" id="offers_priceCurrency" value="" class="regular-text">
+					</td>
+				</tr>
+
+			</tbody>
+		</table>
+
+		<?php submit_button( 'Save Changes' ); ?>
+		
+
+	</form>
+</div>

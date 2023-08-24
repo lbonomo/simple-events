@@ -15,13 +15,15 @@ https://github.com/gruntjs/grunt-contrib-watch
 */
 module.exports = function (grunt) {
 
+  const extensions = '{css,php,js,html,png,svg}'
+
 grunt.initConfig({
 
   browserSync: {
     dev: {
       bsFiles: {
         src : [
-          'dst/**/*.{png,svg,php,css,js,txt,html,png,svg}'
+          `dst/**/*.${extensions}`
         ]
       },
       options: {
@@ -50,7 +52,7 @@ grunt.initConfig({
       files: [{
         cwd: 'src/',
         src: [
-          '**/*.{png,svg,php,css,js,txt,html,png,svg}'
+          `**/*.${extensions}`
         ],
         dest: 'dst/',
       }]
@@ -65,9 +67,12 @@ grunt.initConfig({
   watch: {
     all: {
       files: [
-        'dst/**/*.{png,svg,php,css,js,txt,html,png,svg}'
+        `src/**/*.${extensions}`
       ],
-      tasks: ['sync:all'],
+      tasks: [
+        'clean:dst',
+        'sync:all'
+      ],
     }
   },
 
